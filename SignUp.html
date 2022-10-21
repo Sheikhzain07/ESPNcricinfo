@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wonderwins Cricket</title>
+    <link rel="stylesheet" href="SignUp.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <div id="navbar">
+      <div><a href="index.html">
+          <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="espnLogo"></a>
+      </div>
+      <div id="subMenu">
+          <div><a href="LiveScore.html">Live Scores</a></div>
+          <div>Series</div>
+          <div><a href="Teams.html">Teams</a></div>
+          <div>News</div>
+          <div>Features</div>
+          <div>Videos</div>
+          <div>Stats</div>
+      </div>
+      <div id="notificationBar">
+          <div id="fantacy">
+              <img src="https://wassets.hscicdn.com/static/images/fantasy-home.png" alt="fantacyLogo">
+              <div><a href="Login.html">Fantacy</a></div>
+          </div>
+          <div>Edition IN</div>
+          <div><i class="fa-solid fa-moon"></i></div>
+          <div><i class="fa-solid fa-bell"></i></div>
+          <div><i class="fa-solid fa-language"></i></div>
+          <div><i class="fa-solid fa-magnifying-glass"></i></div>
+      </div>
+  </div>
+
+    <div id="main">
+      <div id="box1">
+        <div>
+          <h1>Sign up</h1>
+        </div>
+        <div>
+          <h3>Please Enter Your Details</h3>
+        </div>
+
+        <div>
+          <div>ESPNWNDWNS</div>
+        </div>
+        <div>
+          <input type="email" id="email" placeholder="Email" />
+          <p id="emailreq"></p>
+        </div>
+        <div>
+          <input type="password" id="password" placeholder="Password" />
+          <p id="passreq"></p>
+        </div>
+        <p>
+          <input type="checkbox" id="checkBox" />
+          <span>
+            I have read all Terms & Conditions and Privacy Policy for WonderWins
+          </span>
+        </p>
+        <!-- <div>
+          <button type="button" onclick="signup()">Sign Up</button>
+        </div> -->
+        <div>
+          <button type="button">
+             <p id="pageload">Sign Up</p></a>
+          </button>
+        </div>
+        <div>
+          <h4>Already have an account?<a href="Login.html">Login Now</a></h4>
+        </div>
+      </div>
+
+      <div id="box2">
+        <div>
+          <img
+            src="https://espn.wonderwins.com/assets/images/main_logo.png"
+            alt="Wonderwinslogo2"
+          />
+        </div>
+        <div id="text">
+          <h1>INDIA'S COOLEST</h1>
+          <h2>FANTACY</h2>
+        </div>
+        <div>
+          <h3>PLATFORM</h3>
+        </div>
+        <div>
+          <h4>Download the App</h4>
+        </div>
+        <div id="icons">
+          <div>
+            <img
+              src="https://espn.wonderwins.com/assets/images/android_icon.png"
+              alt="Androidlogo"
+            />
+          </div>
+          <div>
+            <img
+              src="https://espn.wonderwins.com/assets/images/ios_icon.png"
+              alt="Appstorelogo"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var arr = JSON.parse(localStorage.getItem("key")) || [];
+  document.getElementById("pageload").addEventListener("click", signup);
+  function signup() {
+    // window.location.href = "./LoginwithNumber.html";
+    event.preventDefault();
+    var email = document.getElementById("email").value;
+    var pass = document.getElementById("password").value;
+
+    var user = {
+      email: email,
+      password: pass,
+    };
+    arr.push(user);
+    if (email === "") {
+      document.getElementById("emailreq").innerText = "This field is require";
+    }
+    if (pass === "") {
+      document.getElementById("passreq").innerText = "This field is require";
+    }
+    if (pass.lenght < 8) {
+      document.getElementById("passreq").innerText =
+        "Password should have minimum 8 characters";
+    }
+    if(email !== "" && pass !== ""){
+      window.location.href = "./LoginwithNumber.html";
+    }
+
+    var json = JSON.stringify(arr);
+    localStorage.setItem("key", json);
+    // console.log(arr);
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
+  }
+</script>
+
+<script
+  src="https://kit.fontawesome.com/eb1486e731.js"
+  crossorigin="anonymous"
+></script>

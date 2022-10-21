@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#main{
+    display: flex;
+}
+#navbar {
+    display: flex;
+    min-height: 48px;
+    background-color: #03a9f4;
+    padding: 0 12px;
+    align-items: center;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+}
+
+#navbar #subMenu>div:hover,#notificationBar>div:hover{
+    color: #dfe4e6;
+    cursor: pointer;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+#navbar>div:first-child {
+    width: 20%;
+}
+
+#navbar>div>a img {
+    width: 138px;
+}
+
+#subMenu {
+    display: flex;
+    width: 40%;
+    /* justify-content: space-around; */
+    gap: 20px;
+
+}
+
+img+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#notificationBar {
+    margin-left: 40px;
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: flex-end;
+    gap: 28px;
+    align-items: center;
+    width: 40%;
+}
+
+#subMenu a{
+    text-decoration: none;
+    color: #ffffff;
+}
+#notificationBar i{
+    font-size: 18px;
+}
+
+#fantacy {
+    display: flex;
+    
+}
+
+#fantacy>img {
+    width: 24px;
+    margin-right: 8px;
+}
+#fantacy>div a:first-child {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+/* Navbar End  */
+
+#box1{
+    width: 40%;
+    height: 609px;
+}
+#box1 > div > h1{
+    color: #2B2C2D;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 25px;
+    font-size: 30px;
+    margin: 10px 0px 15px;
+    font-weight: 700;
+}
+#box1 > div > h3 {
+    color: #8A8EB3;
+    font-size: 19px;
+    line-height: 27px;
+    font-family: 'Sarabun', sans-serif;
+    font-weight: lighter;
+    margin-top: -25px;
+    text-align: center;
+}
+#box1 > div div{
+    width: 85%;
+    height: 18px;
+    padding-left: 15px;
+    padding: 17px 15px;
+    margin-top: 45px;
+    margin-left: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f2f4;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#box1 > div input{
+    width: 87%;
+    height: 55px;
+    padding-left: 15px;
+    margin-top: 18px;
+    margin-left: 25px; 
+    background-color: #f1f2f4;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    min-height: 56px;
+    appearance: none;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+}
+button{
+    width: 92%;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(97, 95, 95);
+}
+button > p{
+    color: white;
+    font-size: 18px;
+    text-align:center;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+}
+button:hover{
+    background-color: rgb(237, 36, 36);
+}
+#box1 > p{
+    display: flex;
+    margin-left: 5px;
+}
+#box1 > p input{
+    margin-left: 20px;
+}
+#checkBox{
+    margin-left: 15px;
+    margin-top: -10px ;
+}
+#box1 > p span{
+    margin-top: 12px;
+    margin-left: 12px;
+    display:inline-block;
+    width: 80%;
+    text-align: left;
+    font-size: 15px;
+    line-height: 22px;
+    font-family: 'Sarabun', sans-serif;
+    font-weight: lighter;
+}
+
+#box1 > div h4{
+    width: 85%;
+    height: 20px;
+    padding: 17px 15px;
+    border: none;
+    text-align: center;
+    margin-top: 20px;
+    color:  #8A8EB3;
+    font-weight: 800;
+    text-transform: capitalize;
+    font-family: 'Sarabun', sans-serif;
+}
+#box1 > div > h4 a{
+    color: red;
+}
+#emailreq{
+    margin: 10px;
+    margin-left: 20px;
+    color: red;
+}
+#passreq{
+    margin: 10px;
+    margin-left: 20px;
+    color: red;
+}
+
+#box2{
+    width: 60%;
+    height: 609px;
+    background-color:black;
+    background-image: url("./img/ccc.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#box2 > div img{
+    display: flex;
+    justify-content: center;
+    margin-top: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 18%;
+    height: 80px;
+}
+#text{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 20px;
+}
+#text > h1{
+    color: white;
+    font-size: 38px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#text > h2{
+    color: yellow;
+    font-size: 38px;
+    margin-left: -280px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#box2 > div h3{
+    color: yellow;
+    text-align: center;
+    font-size: 38px;
+    margin-top: 3px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#box2 > div  h4{
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#icons{
+    display: flex;
+    margin-top: -140px;
+    height: 200px;
+    justify-content: center;
+    gap: 16px;
+}
+#icons>div> img{
+    width: 180px;
+    height: 60px;
+}

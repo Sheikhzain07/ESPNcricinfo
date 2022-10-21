@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="LoginwithEmail.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <div><a href="index.html">
+          <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="espnLogo"></a>
+      </div>
+      <div id="subMenu">
+          <div><a href="LiveScore.html">Live Scores</a></div>
+          <div>Series</div>
+          <div><a href="Teams.html">Teams</a></div>
+          <div>News</div>
+          <div>Features</div>
+          <div>Videos</div>
+          <div>Stats</div>
+      </div>
+      <div id="notificationBar">
+          <div id="fantacy">
+              <img src="https://wassets.hscicdn.com/static/images/fantasy-home.png" alt="fantacyLogo">
+              <div><a href="Login.html">Fantacy</a></div>
+          </div>
+          <div>Edition IN</div>
+          <div><i class="fa-solid fa-moon"></i></div>
+          <div><i class="fa-solid fa-bell"></i></div>
+          <div><i class="fa-solid fa-language"></i></div>
+          <div><i class="fa-solid fa-magnifying-glass"></i></div>
+      </div>
+  </div>
+
+    <div id="main">
+      <div id="box1">
+        <div>
+          <h1>Log in</h1>
+        </div>
+        <div>
+          <h3>Please Enter Your Registered Email Id And Password.</h3>
+        </div>
+        <div>
+          <input type="email" id="email" placeholder="example@gmail.com" />
+        </div>
+        <div>
+          <input type="password" id="password" placeholder="password" />
+        </div>
+        <div>
+          <p>Forget Password</p>
+        </div>
+        <div>
+          <button type="button" onclick="login()">
+            <p>Login</p>
+          </button>
+        </div>
+        <div>
+          <h4>Don't have an account? <a href="SignUp.html">Sign Up</a></h4>
+        </div>
+        <div>
+          <h5><a href="Login.html">Back</a></h5>
+        </div>
+      </div>
+
+      <div id="box2">
+        <div>
+          <img
+            src="https://espn.wonderwins.com/assets/images/main_logo.png"
+            alt="Wonderwinslogo2"
+          />
+        </div>
+        <div id="text">
+          <h1>INDIA'S COOLEST</h1>
+          <h2>FANTACY</h2>
+        </div>
+        <div>
+          <h3>PLATFORM</h3>
+        </div>
+        <div>
+          <h4>Download the App</h4>
+        </div>
+        <div id="icons">
+          <div>
+            <img
+              src="https://espn.wonderwins.com/assets/images/android_icon.png"
+              alt="Androidlogo"
+            />
+          </div>
+          <div>
+            <img
+              src="https://espn.wonderwins.com/assets/images/ios_icon.png"
+              alt="Appstorelogo"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var arr = JSON.parse(localStorage.getItem("key"));
+  function login() {
+    event.preventDefault();
+
+    var email = document.getElementById("email").value;
+    console.log(email);
+    var password = document.getElementById("password").value;
+    var flag = false;
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i].email === email && arr[i].password === password) {
+        flag = true;
+        break;
+      }
+    }
+    if (flag) {
+      alert("Logged in");
+    } else {
+      alert("Wrong credential");
+    }
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
+  }
+</script>
+<script
+  src="https://kit.fontawesome.com/eb1486e731.js"
+  crossorigin="anonymous"
+></script>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICC Ranking</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            
+        }
+        body{
+            background: rgb(234, 226, 226);
+        }
+        #navbar {
+            display: flex;
+            min-height: 48px;
+            background-color: #03a9f4;
+            padding: 0 12px;
+            align-items: center;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            position: sticky;
+            top: 0;
+        }
+
+        #navbar #subMenu>div:hover,#notificationBar>div:hover{
+            color: #dfe4e6;
+            cursor: pointer;
+            transform: scale(1.1);
+            text-decoration: underline;
+        }
+
+        #navbar>div:first-child {
+            width: 20%;
+        }
+
+        #navbar>div>a img {
+            width: 138px;
+        }
+
+        #subMenu {
+            display: flex;
+            width: 40%;
+            /* justify-content: space-around; */
+            gap: 20px;
+
+        }
+
+        img+div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #notificationBar {
+            margin-left: 40px;
+            display: flex;
+            /* justify-content: space-between; */
+            justify-content: flex-end;
+            gap: 28px;
+            align-items: center;
+            width: 40%;
+        }
+
+        #subMenu a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        #notificationBar i{
+            font-size: 18px;
+        }
+
+        #fantacy {
+            display: flex;
+            
+        }
+
+        #fantacy>img {
+            width: 24px;
+            margin-right: 8px;
+        }
+        #fantacy>div a:first-child {
+            color: #ffffff;
+            text-decoration: none;
+
+        }
+
+        #mainPage{
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            
+            margin-top: 40px;
+            font-family: Tahoma, Geneva, Arial, "Arial Narrow", Verdana, sans-serif;
+        }
+        #col1{
+            width: 50%;
+            border: 1px solid rgb(167, 164, 164);
+            padding: 16px;
+            border-radius: 12px;
+            background-color: #ffffff;
+            /* margin: 16px 0; */
+            
+        }
+        #col1Data h1{
+            color: #333333;
+            font-size: 24px;
+        }
+        #col1Data h3{
+            /* margin: 12px 0; */
+            color: #333333;
+            margin-top: 12px;
+            font-size: 16px;
+            margin-bottom: 12px;
+            font-family: Tahoma, Geneva, Arial, "Arial Narrow", Verdana, sans-serif;
+        }
+        #col1Data h6,thead{
+            background-color: #eeeeee;
+            font-size: 12px;
+        }
+        
+        #table1{
+            width: 100%;
+            text-align: left;
+            margin-bottom: 12px;
+            font-size: 12px;
+            color: #222222;
+        }
+        /* #col1Data>#table1>p:first-child{
+            font-size: 152px;
+        } */
+        #table1 thead,tbody tr td{
+            padding: 4px;
+        }
+        .table1Col{
+            width: 15%;
+        }
+        .table1Col1{
+            width: 10%;
+        }
+        .table1Col2{
+            width: 25%;
+        }
+        #table1 tr th,td{
+            border-bottom: 1px dotted gray;
+        }
+        #para{
+            font-size: 12px;
+            font-family: Helvetica, sans-serif;
+            font-weight: lighter;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            border-bottom: 1px solid gray;
+        }
+
+   /* sidebar */
+        #sidebar{
+            width: 25%;
+            border: 1px solid rgb(216, 210, 210);
+            background-color: #ffffff;
+            border-top: 8px solid #d3cfcf;;
+        }
+        .gear{
+            color: black;
+            margin-right: 8px;
+        }
+        #custom , #matchnews{
+            padding: 14px;
+            font-size: 14px;
+            color: #3f4041;
+        }
+        #matchnews{
+            display: flex;
+            justify-content: space-between;
+        }
+        #matchnews>div:last-child{
+            color: #03a9f4;
+        }
+        #news{
+            display: flex;
+            padding: 12px;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+        #news img{
+            width: 70px;
+            height: 50px;
+            border-radius: 8px;
+        }
+        #news h4,p{
+            width: fit-content;
+            font-family: BentonSans-Medium,Arial,Noto Sans,sans-serif;
+            font-size: 14px;
+            color: #3f4041;
+        }
+        #news h4{
+            margin-bottom: 8px;
+        }
+        #news p{
+            color: #656666;
+            font-size: 12px;
+        }
+        #askcric{
+            display: flex;
+            justify-content: center;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        #askcric>img{
+            width: 50%;  
+        }
+        #ques>div{
+            font-family: BentonSans-Bold,Arial,Noto Sans,sans-serif;
+            padding: 12px;
+            font-size: 16px;
+            color: #2b2c2d;
+        }
+        .magni{
+            color: black;
+            margin-right: 8px;
+        }
+        #quesList{
+            display: flex;
+        }
+        #quesList div{
+            font-size: 14px;
+            /* width: 50%; */
+            
+        }
+
+        #notificationBar button{
+            border: none;
+            background-color: #03a9f4;
+            color: #ffffff;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <div id="navbar">
+        <div><a href="index.html">
+            <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="espnLogo"></a>
+        </div>
+        <div id="subMenu">
+            <div><a href="LiveScore.html">Live Scores</a></div>
+            <div>Series</div>
+            <div><a href="Teams.html">Teams</a></div>
+            <div>News</div>
+            <div>Features</div>
+            <div>Videos</div>
+            <div>Stats</div>
+        </div>
+        <div id="notificationBar">
+            <div id="fantacy">
+                <img src="https://wassets.hscicdn.com/static/images/fantasy-home.png" alt="fantacyLogo">
+                <div><a href="Login.html">Fantacy</a></div>
+            </div>
+            <div>Edition IN</div>
+            <div><i class="fa-solid fa-moon"></i></div>
+            <div><i class="fa-solid fa-bell"></i></div>
+            <div><i class="fa-solid fa-language"></i></div>
+            <div><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+    </div>
+    <div id="mainPage">
+        <div id="col1">
+            <div id="col1Data">
+                <h1>ICC rankings for Tests, ODIs</h1>
+                <h3>ICC Test Rankings</h3>
+                <table id="table1">
+                    <h6><strong> 28 July 2022</strong><h6>
+                    <thead>
+                        <tr>
+                            <th class="table1Col1">Pos</th>
+                            <th class="table1Col2">Team</th>
+                            <th class="table1Col">Matches</th>
+                            <th class="table1Col">Points</th>
+                            <th class="table1Col">Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Australia</td>
+                            <td>22</td>
+                            <td>2703</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>India</td>
+                            <td>29</td>
+                            <td>3310</td>
+                            <td>114</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>South Africa</td>
+                            <td>21</td>
+                            <td>2306</td>
+                            <td>110</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>England</td>
+                            <td>39</td>
+                            <td>3909</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>New Zealand</td>
+                            <td>27</td>
+                            <td>2704</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Pakistan</td>
+                            <td>23</td>
+                            <td>2126</td>
+                            <td>92</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Sri Lanka</td>
+                            <td>26</td>
+                            <td>2282</td>
+                            <td>88</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>West Indies</td>
+                            <td>25</td>
+                            <td>1988</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Bangladesh</td>
+                            <td>22</td>
+                            <td>1047</td>
+                            <td>48</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Zimbabwe</td>
+                            <td>6</td>
+                            <td>148</td>
+                            <td>25</td>
+                        </tr>
+                    </tbody> 
+                </table>
+                <p id="para">*Afghanistan and Ireland have Test status but have not played enough matches to figure on the rankings table</p>
+                
+                <h3>ICC ODI Rankings</h3>
+                <table id="table1">
+                    <h6><strong> 03 September 2022</strong></h6>
+                    <thead>
+                        <tr>
+                            <th class="table1Col1">Pos</th>
+                            <th class="table1Col2">Team</th>
+                            <th class="table1Col">Matches</th>
+                            <th class="table1Col">Points</th>
+                            <th class="table1Col">Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>New Zealand</td>
+                            <td>19</td>
+                            <td>2355</td>
+                            <td>124</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>England</td>
+                            <td>27</td>
+                            <td>3226</td>
+                            <td>119</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>India</td>
+                            <td>31</td>
+                            <td>3447</td>
+                            <td>111</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Pakistan</td>
+                            <td>21</td>
+                            <td>2237</td>
+                            <td>107</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>South Africa</td>
+                            <td>21</td>
+                            <td>2111</td>
+                            <td>101</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Australia</td>
+                            <td>26</td>
+                            <td>2560</td>
+                            <td>98</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Bangladesh</td>
+                            <td>30</td>
+                            <td>2753</td>
+                            <td>92</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Sri Lanka</td>
+                            <td>29</td>
+                            <td>2658</td>
+                            <td>92</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>West Indies</td>
+                            <td>41</td>
+                            <td>2902</td>
+                            <td>71</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Afghanistan</td>
+                            <td>16</td>
+                            <td>1071</td>
+                            <td>67</td>
+                        </tr>
+                    </tbody> 
+                </table>
+            </div>
+        </div>
+
+
+
+        <div id="sidebar">
+            <div id="custom"><i class="fa-sharp fa-solid fa-gear gear"></i><strong> CUSTOMIZE YOUR PAGE</strong></div>
+            <hr>
+            <div id="matchnews">
+                <div><strong> MATCH COVERAGE</strong></div>
+                <div>All Match News <i class="fa-sharp fa-solid fa-angle-right"></i></div>
+            </div>
+            <hr>
+            <div id="news">
+                <div><h4>This is marvelous from them @FirdoseM. Our batting has been a problem for a good while.</h4>
+                <p>"In such a high-pressure game to play an innings like this gives me massive confidence as a player an in my growth"</p></div>
+                <div><img src="https://pbs.twimg.com/card_img/1565409539611955200/e5RSaZBO?format=jpg&name=600x314" alt="news1"></div>
+            </div>
+            <hr>
+            <div id="news">
+                <div><h4>Wonderful piece on the soap opera that is the Bangladesh Cricket Board and its them president Nazmul Hassan</h4>
+                <p>Having rediscovered his mojo in the Asia Cup with back-to-back fifties, Kohli says "what happens in the change room is the only thing that matters"</p></div>
+                <div><img src="https://pbs.twimg.com/card_img/1564865005438136320/S_8ktajZ?format=jpg&name=600x314" alt="news1"></div>
+            </div>
+            <hr>
+            <div id="askcric">
+                <img src="https://wassets.hscicdn.com/static/images/nlp-logo.svg" alt="askCricInfo">
+            </div>
+            <!-- <hr> -->
+            <div id="ques">
+                <div><h4>Instant answers to T20 questions</h4></div>
+                <div id="quesList">
+                    <div><i class="fa-sharp fa-solid fa-magnifying-glass magni"></i></div>
+                    <div>Which batter hit the most sixes in IPL 2022?</div>
+                </div>
+                <div id="quesList">
+                    <div><i class="fa-sharp fa-solid fa-magnifying-glass magni"></i></div>
+                    <div>What is the highest partnership for the first wicket in women's T20Is?</div>
+                </div>
+                <div id="quesList">
+                    <div><i class="fa-sharp fa-solid fa-magnifying-glass magni"></i></div>
+                    <div>What is the highest score by a batter in a successful run-chase in men's ODIs?</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://kit.fontawesome.com/c3ff0c4a78.js" crossorigin="anonymous"></script>
+<script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>

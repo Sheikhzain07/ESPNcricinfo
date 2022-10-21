@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+</head>
+<style>
+    .material-symbols-outlined {
+        padding-top: 12px;
+        padding-bottom: 24px;
+        box-sizing: border-box;
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    input,
+    select {
+        height: 60px;
+        width: 400px;
+    }
+
+    .backgroundblue {
+        background-color: #03a9f4;
+        height: 300px;
+    }
+
+    select {
+        text-align: center;
+        border-radius: 8px 0px 0px 8px;
+        font-size: 20px;
+        box-sizing: border-box;
+        width: 150px;
+    }
+
+    input {
+        border-radius: 0px 8px 8px 0px;
+        margin-left: -5px;
+        height: 65px;
+        box-sizing: border-box;
+     }
+
+    input,
+    select,
+    select+span {
+        background-color: #33b9f6;
+        color: white;
+        box-sizing: border-box;
+        border: 0px;
+        border-color: #03a9f4;
+        cursor: pointer;
+    }
+
+    .backgroundwhite option {
+        background-color: white;
+        color: black;
+    }
+
+    input::placeholder {
+        font-size: 24px;
+        color: white;
+    }
+
+    .search_border {
+        width: 900px;
+        border: 2px solid #33b9f6;
+        margin-left: 50px;
+        background-color: #33b9f6;
+        border-radius: 16px;
+        cursor: pointer;
+    }
+
+    img {
+        padding-top: 20px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+    }
+
+    .searchtrying {
+        display: felx;
+        margin-left: 50px;
+        justify-content: space-between;
+    }
+
+
+
+    .linkflex img {
+        height: 20px;
+        margin-left: 50px;
+        padding: 0px;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    input {
+        width: 550px;
+        cursor: pointer;
+    }
+
+    .link,
+    .linkflex {
+        display: flex;
+        gap: 5px;
+    }
+
+    h4 {
+        margin: 12px;
+        color: white;
+    }
+
+    .link {
+        justify-content: space-between;
+    }
+
+    .searchtrying .material-symbols-outlined,
+    .linkflex .material-symbols-outlined {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .searchtrying {
+        width: 67%;
+        border: 2px solid white;
+        border-radius: 12px;
+        background-color: white;
+        margin-top: -30px;
+    }
+
+    #justify {
+        display: flex;
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-content: space-between;
+        margin-top: 16px;
+    }
+
+    p {
+        margin-top: 0px;
+        padding: 0px;
+    }
+
+    .secondrowflex {
+        display: flex;
+        gap: 5px;
+    }
+
+    .markarrowlast {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .redarrow {
+        color: red;
+    }
+
+    h3 {
+        margin-top: 5px;
+        margin-bottom: 20px;
+        color: rgba(0, 0, 0, .87);
+    }
+
+    #mice {
+        color: white;
+    }
+
+    .dhoni {
+        width: 850px;
+        text-align: center;
+    }
+
+    .backgroundblue {
+        margin: -10px;
+        padding: 0px;
+    }
+
+    .search_border .material-symbols-outlined {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    input,
+    select {
+        outline: none;
+    }
+
+    #justify {
+        font-family: BentonSansMedium;
+    }
+
+    * {
+        font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;
+    }
+
+    .markarrowlast {
+        color: lightslategray;
+        background-color: transparent;
+        font-family: BentonSans;
+    }
+
+    .searchtrying {
+        border: 1px solid white;
+        box-shadow:rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+
+    .searchtrying>div {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h3 {
+        color: rgb(100 101 102);
+    }
+
+    h4{
+        color: #bde8fc;
+    }
+
+    #logo{
+        margin-top: -4px;
+    }
+    
+    .search_border{
+        justify-content: center;
+    }
+
+    .secondrowflex h3{
+        padding-left: 10px;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <div class="backgroundblue">
+        <div class="link">
+            <div class="linkflex">
+                <a href="index.html"><img src="https://wassets.hscicdn.com/static/images/logo.png"
+                        alt="espn logo"></a>
+                <h4>Live Scores</h4>
+                <h4>Series</h4>
+                <h4>Teams</h4>
+                <h4>News</h4>
+                <h4>Features</h4>
+                <h4>Videos</h4>
+                <h4>Stats</h4>
+            </div>
+            <div class="linkflex">
+                <h4>Edition IN</h4>
+                <h4><span id="logo"class="material-symbols-outlined">
+                        apps
+                    </span></h4>
+                <h4><span id="logo" class="material-symbols-outlined">
+                        search
+                    </span></h4>
+            </div>
+
+        </div>
+        <img src="https://www.espncricinfo.com/ask/images/askcriclogo.png" alt="ask cricinfo">
+        <br />
+        <!-- searching and input place -->
+        <div class="search_border">
+            <select name="" class="backgroundwhite">
+                <option>All T20s</option>
+                <option>ODI</option>
+                <option>TEST</option>
+
+            </select>
+            <span id="search" class="material-symbols-outlined" onclick="fun()">
+                search
+            </span>
+            <input type="text" placeholder="Search for Test/ODI/T20 stats" id="question" />
+            <span id="mice" class="material-symbols-outlined">
+                keyboard_voice
+            </span>
+        </div>
+
+    </div>
+
+    <div>
+        <div class="searchtrying">
+            <div id="justify">
+                <h3>TRY ASKING...</h3>
+                <h3>Tips for searching</h3>
+            </div>
+            <hr />
+            <div class="markarrowlast">
+                <div class="secondrowflex">
+                    <h3> <span class="material-symbols-outlined">
+                            search
+                        </span></h3>
+                    <h3>highest aggregate runs scored by both wicketkeepers in a Test match</h3>
+                </div>
+                <h3 class="redarrow"><span class="material-symbols-outlined">chevron_right</span></h3>
+            </div>
+
+            <div class="markarrowlast">
+                <div class="secondrowflex">
+                    <h3> <span class="material-symbols-outlined">
+                            search
+                        </span></h3>
+                    <h3>highest score by a team in t20</h3>
+                </div>
+                <h3 class="redarrow"><span class="material-symbols-outlined">chevron_right</span></h3>
+            </div>
+            <div class="markarrowlast">
+                <div class="secondrowflex">
+                    <h3> <span class="material-symbols-outlined">
+                            search
+                        </span></h3>
+                    <h3>Which bowler has the best economy rate in the death overs in the IPL</h3>
+                </div>
+                <h3 class="redarrow"><span class="material-symbols-outlined">chevron_right</span></h3>
+            </div>
+            <div class="markarrowlast">
+                <div class="secondrowflex">
+                    <h3> <span class="material-symbols-outlined">
+                            search
+                        </span></h3>
+                    <h3>Which team took more wickets in the death in IPL 2020- CSK or MI?</h3>
+                </div>
+                <h3 class="redarrow"><span class="material-symbols-outlined">chevron_right</span></h3>
+            </div>
+            <div class="markarrowlast">
+                <div class="secondrowflex">
+                    <h3> <span class="material-symbols-outlined">
+                            search
+                        </span></h3>
+                    <h3>Which team has the worst Economy rate in the death overs in IPL 2020?</h3>
+                </div>
+                <h3 class="redarrow"><span class="material-symbols-outlined">chevron_right</span></h3>
+            </div>
+        </div>
+
+        <div class="dhoni">
+            <img src="https://tpc.googlesyndication.com/simgad/12370993572285548451?" alt="mutual fund dhoni image">
+        </div>
+    </div>
+
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</body>
+
+</html>
+
+<script>
+
+    function fun(){
+        var q=document.getElementById("question").value;
+        document.getElementById("question").value="";
+        alert("Virat Kholi");
+    }
+
+</script>

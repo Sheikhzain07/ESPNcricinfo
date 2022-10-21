@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body>div:first-child {
+            background-color: #0398dc;
+        }
+
+        #mainNavbar{
+            /* padding: 4px; */
+        }
+        #topNav {
+            display: flex;
+            color: #ffffff;
+            gap: 20px;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 8px;
+        }
+        #topNav>div:hover{
+            color: #d3d7d9;
+            cursor: pointer;
+            font-weight: 300;
+        }
+
+        #matchData {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 8px;
+            /* margin-left: 4px; */
+        }
+
+        #matchData>div {
+            border: 1px solid lightgray;
+            border-radius: 16px;
+            background-color: #ffffff;
+            /* gap: 10px; */
+            padding: 10px;
+            width: 95%;
+            margin-bottom: 12px;
+        }
+        #matchData>div:hover{
+            transform: scale(1.07);
+            transition: 0.6s ease transform;
+            cursor: pointer;
+        }
+        #boxsh>p:first-child {
+            font-size: 12px;
+            /* font-weight: 600; */
+            color: rgb(87, 85, 85);
+            margin-bottom: 12px;
+        }
+        #boxsh>p a:first-child {
+            color: rgb(87, 85, 85);
+            text-decoration: none;
+
+        }
+
+        #flagsh+p {
+            font-size: 10px;
+            margin: 8px 0;
+            color: rgb(58, 57, 57);
+        }
+
+        #flagsh {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        #flagsh>img {
+            height: 20px;
+            width: 20px;
+            margin-right: 8px;
+        }
+        #flagsh>div{
+            font-size: 12px;
+            font-weight: 500;
+            color: rgb(49, 48, 48);
+        }
+        #matchTime {
+            display: flex;
+            gap: 30px;
+            margin-top: 8px;
+        }
+        #matchTime>div{
+            font-size: 12px;
+            font-weight: 600;
+            color: rgb(49, 48, 48)
+        }
+        #scoresh{
+            display: flex;
+            justify-content: space-between;
+        }
+        #scoresh>div:last-child{
+            font-size: 14px;
+            font-weight: bold;
+        }
+        #scoresh~p{
+            font-size: 10px;
+            margin: 8px 0;
+            color: rgb(58, 57, 57);
+        }
+
+       
+
+        #navbar {
+            display: flex;
+            min-height: 48px;
+            background-color: #03a9f4;
+            padding: 0 12px;
+            align-items: center;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            position: sticky;
+            top: 0;
+        }
+
+        #navbar #subMenu>div:hover,#notificationBar>div:hover{
+            color: #dfe4e6;
+            cursor: pointer;
+            transform: scale(1.1);
+            text-decoration: underline;
+        }
+
+        #navbar>div:first-child {
+            width: 20%;
+        }
+
+        #navbar>div>a img {
+            width: 138px;
+        }
+
+        #subMenu {
+            display: flex;
+            width: 40%;
+            /* justify-content: space-around; */
+            gap: 20px;
+
+        }
+
+        img+div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #notificationBar {
+            margin-left: 40px;
+            display: flex;
+            /* justify-content: space-between; */
+            justify-content: flex-end;
+            gap: 28px;
+            align-items: center;
+            width: 40%;
+        }
+
+        #subMenu a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        #notificationBar i{
+            font-size: 18px;
+        }
+
+        #fantacy {
+            display: flex;
+            
+        }
+
+        #fantacy>img {
+            width: 24px;
+            margin-right: 8px;
+        }
+        #fantacy>div a:first-child {
+            color: #ffffff;
+            text-decoration: none;
+
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- topnavbar -->
+    <div id="mainNavbar">
+        <div id="topNav">
+            <div onclick="match()">Matches(9)</div>
+            <div onclick="asia()">Asia Cup(2)</div>
+            <div onclick="cpl()">CPL(4)</div>
+            <div onclick="wcpl()">WCPL(1)</div>
+            <div>NZ-A in IND(1)</div>
+            
+            
+            <div>Men's Hundred(1)</div>
+            <div>Women's Hundred(1)</div>
+        </div>
+        <div id="matchData">
+            <div id="boxsh" class="asia">
+                <p><a href="scoreboard.html"><strong>TODAY, 7:30 PM</strong> - Asia Cup - T20I - Dubai(DSC)</a></p>
+                <div id="flagsh">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313100/313128.logo.png"
+                        alt="indiaFlag">
+                    <div><h4>INDIA</h4></div>
+                </div>
+                <div id="flagsh">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313100/313129.logo.png"
+                        alt="pakFlag">
+                    <div><h4>PAKISTAN</h4></div>
+                </div>
+
+                <p>Match starts in <strong>4</strong> hrs <strong>39</strong> mins</p>
+                <hr>
+                <div id="matchTime">
+                    <div>Schedule</div>
+                    <div>Table</div>
+                    <div>Fantacy</div>
+                </div>
+            </div>
+            <div id="boxsh" class="asia">
+                <p><strong>Result</strong> - Asia Cup - T20I - Sharjah</p>
+                <div id="scoresh">
+                    <div id="flagsh">
+                        <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/321000/321005.png"
+                            alt="afgFlag">
+                        <div><h4>AFG</h4></div>
+                    </div>
+                    <div>176/6</div>
+                </div>
+                <div id="scoresh">
+                    <div id="flagsh">
+                        <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/340000/340047.png"
+                            alt="slFlag">
+                        <div><h4>SL</h4></div>
+                    </div>
+                    <div>179/4</div>
+                </div>
+
+                <p>Srilanka won by <strong>6</strong> wickets</p>
+                <hr>
+                <div id="matchTime">
+                    <div>Schedule</div>
+                    <div>Table</div>
+                    <div>Fantacy</div>
+                </div>
+            </div>
+            <div id="boxsh" class="wcpl">
+                <p><strong>TOMORROW, 12:00 AM</strong> - WCPL - Basseterre</p>
+                <div id="flagsh">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313400/313485.logo.png"
+                        alt="tkrwFlag">
+                    <div><h4>TRINBAGO KNIGHT RIDERS WOMENS</h4></div>
+                </div>
+                <div id="flagsh">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/325900/325974.png"
+                        alt="brwFlag">
+                    <div><h4>BARBADOS ROYALS WOMEN</h4></div>
+                </div>
+
+                <p>Match starts in <strong>9</strong> hrs <strong>19</strong> mins</p>
+                <hr>
+                <div id="matchTime">
+                    <div>Schedule</div>
+                    <div>Table</div>
+                    <div>Fantacy</div>
+                </div>
+            </div>
+            <div id="boxsh" class="cpl">
+                <p><strong>NO RESULT</strong> - CPL - T20 - Dubai(DSC)</p>
+                <div id="flagsh">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313500/313501.logo.png"
+                        alt="stknpFlag">
+                    <div><h4>STKNP</h4></div>
+                </div>
+                <div id="flagsh">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313400/313485.logo.png"
+                        alt="tkrFlag">
+                    <div><h4>TKR</h4></div>
+                </div>
+
+                <p>No result(abandoned with a toss)</p>
+                <hr>
+                <div id="matchTime">
+                    <div>Schedule</div>
+                    <div>Table</div>
+                    <div>Fantacy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- navbar -->
+    <div id="navbar">
+        <div><a href="index.html">
+            <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="espnLogo"></a>
+        </div>
+        <div id="subMenu">
+            <div><a href="LiveScore.html">Live Scores</a></div>
+            <div>Series</div>
+            <div><a href="Teams.html">Teams</a></div>
+            <div>News</div>
+            <div>Features</div>
+            <div>Videos</div>
+            <div>Stats</div>
+        </div>
+        <div id="notificationBar">
+            <div id="fantacy">
+                <img src="https://wassets.hscicdn.com/static/images/fantasy-home.png" alt="fantacyLogo">
+                <div><a href="Login.html">Fantacy</a></div>
+            </div>
+            <div>Edition IN</div>
+            <div><i class="fa-solid fa-moon"></i></div>
+            <div><i class="fa-solid fa-bell"></i></div>
+            <div><i class="fa-solid fa-language"></i></div>
+            <div><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://kit.fontawesome.com/c3ff0c4a78.js" crossorigin="anonymous"></script>
+<script>
+     function asia(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility= "hidden"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility= "hidden"
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="visible"
+    asia[1].style.visibility="visible"
+    }
+    function match(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility="visible"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility="visible" 
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="visible"
+    asia[1].style.visibility="visible"
+    }
+    function cpl(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility="visible"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility="hidden" 
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="hidden"
+    asia[1].style.visibility="hidden"
+
+    }
+    function wcpl(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility="hidden"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility="visible" 
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="hidden"
+    asia[1].style.visibility="hidden"
+    }
+</script>
